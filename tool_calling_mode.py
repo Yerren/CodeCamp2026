@@ -10,21 +10,18 @@ from just_ask_1 import VALID_APPLICATIONS
 load_dotenv()  # loads GEMINI_API_KEY from .env
 
 
-class Parameter(BaseModel):
-    name: str = Field(description="The parameter name, as listed for the chosen action")
-    value: str = Field(
-        description="The value for the parameter, taken from the transcript"
-    )
-
-
 class ParsedCommand(BaseModel):
     target_application: str = Field(description="The application the user wants to use")
     target_action: str = Field(
         description="The action to perform within that application"
     )
-    additional_parameters: list[Parameter] = Field(
-        default_factory=list,
-        description="Any parameters for the action mentioned in the transcript",
+    # Open-ended dict: keys are parameter names, values are taken from the transcript
+    additional_parameters: dict[str, str] = Field(
+        default_factory=dict,
+        description=(
+            "Parameters for the action mentioned in the transcript, as a mapping "
+            "of parameter name (as listed for the chosen action) to value"
+        ),
     )
 
 
@@ -76,6 +73,7 @@ def parse_transcript(
     )
 
     function_call = response.function_calls[0]
+    print(function_call)
     # Validate the tool-call arguments against the Pydantic model
     return ParsedCommand.model_validate(function_call.args)
 
