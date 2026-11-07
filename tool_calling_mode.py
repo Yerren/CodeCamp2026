@@ -15,7 +15,6 @@ class ParsedCommand(BaseModel):
     target_action: str = Field(
         description="The action to perform within that application"
     )
-    # Open-ended dict: keys are parameter names, values are taken from the transcript
     additional_parameters: dict[str, str] = Field(
         default_factory=dict,
         description=(
