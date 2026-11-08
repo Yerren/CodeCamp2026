@@ -1,3 +1,4 @@
+import time
 import json
 
 from dotenv import load_dotenv
@@ -53,6 +54,7 @@ def parse_transcript(
 
     client = genai.Client()
 
+    start = time.perf_counter()
     response = client.models.generate_content(
         model="gemini-3.5-flash-lite",
         contents=message,
@@ -70,6 +72,8 @@ def parse_transcript(
             ),
         ),
     )
+    elapsed = time.perf_counter() - start
+    print(f"Client call took {elapsed:.2f}s")
 
     function_call = response.function_calls[0]
     print(function_call)

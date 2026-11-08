@@ -1,3 +1,4 @@
+import time
 import json
 
 from dotenv import load_dotenv
@@ -81,10 +82,13 @@ def parse_transcript(text_in: str, valid_applications: dict[str, dict]):
 
     client = genai.Client()
 
+    start = time.perf_counter()
     interaction = client.interactions.create(
         model="gemini-3.5-flash-lite",
         input=message,
     )
+    elapsed = time.perf_counter() - start
+    print(f"Client call took {elapsed:.2f}s")
 
     return interaction.output_text
 

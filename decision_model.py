@@ -1,4 +1,5 @@
 import json
+import time
 from typing import cast
 
 from dotenv import load_dotenv
@@ -10,8 +11,7 @@ load_dotenv()  # loads TYPESAFE_API_KEY from .env
 
 
 def build_criteria(valid_applications: dict[str, dict]) -> dict[str, str]:
-    """Flatten every application/action pair into one option, e.g. "maps.navigate".
-    The description helps the model tell similar options apart."""
+    """Flatten every application/action pair into one option, e.g. "maps.navigate"."""
     criteria = {}
     for app_name, app in valid_applications.items():
         for action_name in app["actions"]:
@@ -24,7 +24,11 @@ def build_criteria(valid_applications: dict[str, dict]) -> dict[str, str]:
 def parse_transcript(text_in: str, valid_applications: dict[str, dict]):
     # A decision model can only choose between options, it can't extract text,
     # so there are no additional parameters here: just the application + action.
+
+    print(json.dumps(build_criteria(valid_applications), indent=2))
+
     with TypeSafeClient(model="jev-latest") as client:
+        start = time.perf_counter()
         response = client.system_one(
             state=text_in,
             questions={
@@ -34,6 +38,8 @@ def parse_transcript(text_in: str, valid_applications: dict[str, dict]):
                 ),
             },
         )
+        elapsed = time.perf_counter() - start
+        print(f"Client call took {elapsed:.2f}s")
 
     print(response)
     return response.answers["command"]

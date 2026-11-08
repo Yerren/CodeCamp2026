@@ -1,3 +1,4 @@
+import time
 from typing import Literal
 
 from dotenv import load_dotenv
@@ -151,6 +152,7 @@ def parse_transcript(text_in: str) -> ParsedCommand:
 
     client = genai.Client()
 
+    start = time.perf_counter()
     response = client.models.generate_content(
         model="gemini-3.5-flash-lite",
         contents=message,
@@ -159,6 +161,8 @@ def parse_transcript(text_in: str) -> ParsedCommand:
             response_json_schema=const_to_enum(ParsedCommand.model_json_schema()),
         ),
     )
+    elapsed = time.perf_counter() - start
+    print(f"Client call took {elapsed:.2f}s")
 
     print(response)
     return ParsedCommand.model_validate(response.parsed)
