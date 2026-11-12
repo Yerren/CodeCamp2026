@@ -6,7 +6,7 @@ from typesafe_sdk import Choice, ChoiceAnswer, TypeSafeClient
 
 from just_ask_1 import VALID_APPLICATIONS
 
-load_dotenv()  # loads TYPESAFE_API_KEY from .env
+load_dotenv()
 
 
 def parse_transcript(
@@ -31,6 +31,7 @@ def parse_transcript(
         )
         elapsed = time.perf_counter() - start
         print(f"Application call took {elapsed:.2f}s")
+        print(app_response)
 
         app_answer = cast(ChoiceAnswer, app_response.answers["application"])
         app = valid_applications[app_answer.choice]
@@ -54,7 +55,7 @@ def parse_transcript(
         )
         elapsed = time.perf_counter() - start
         print(f"Action call took {elapsed:.2f}s")
-
+        print(action_response)
         action_answer = cast(ChoiceAnswer, action_response.answers["action"])
 
     return app_answer, action_answer

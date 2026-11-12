@@ -6,14 +6,15 @@ from typesafe_sdk import Choice, ChoiceAnswer, TypeSafeClient
 
 from just_ask_1 import VALID_APPLICATIONS
 
-load_dotenv()  # loads TYPESAFE_API_KEY from .env
+load_dotenv()
 
 NONE_OPTION = "none"
 
 
 def number_words(text_in: str) -> tuple[list[str], str]:
     """Split the transcript into words and give each one an ID.
-    Returns the words plus a state string showing the transcript and the numbered words."""
+    Returns the words plus a state string showing the transcript and the numbered words.
+    """
     words = text_in.split()
     numbered = "\n".join(f"{i}: {word}" for i, word in enumerate(words))
     state = f"transcript: {text_in}\n\nwords (id: word):\n{numbered}"
@@ -24,7 +25,9 @@ def parse_transcript(text_in: str, valid_applications: dict[str, dict]) -> dict:
     words, state = number_words(text_in)
 
     # Every word ID is a valid choice, plus "none" for parameters not mentioned
-    word_criteria: dict[str, str | None] = {str(i): word for i, word in enumerate(words)}
+    word_criteria: dict[str, str | None] = {
+        str(i): word for i, word in enumerate(words)
+    }
     word_criteria[NONE_OPTION] = "The parameter is not mentioned in the transcript"
 
     with TypeSafeClient(model="jev-latest") as client:
@@ -44,6 +47,7 @@ def parse_transcript(text_in: str, valid_applications: dict[str, dict]) -> dict:
         )
         elapsed = time.perf_counter() - start
         print(f"Application call took {elapsed:.2f}s")
+        print(app_response)
 
         app_answer = cast(ChoiceAnswer, app_response.answers["application"])
         app_name = app_answer.choice
@@ -68,6 +72,7 @@ def parse_transcript(text_in: str, valid_applications: dict[str, dict]) -> dict:
         )
         elapsed = time.perf_counter() - start
         print(f"Action call took {elapsed:.2f}s")
+        print(action_response)
 
         action_answer = cast(ChoiceAnswer, action_response.answers["action"])
         action_name = action_answer.choice
@@ -101,6 +106,7 @@ def parse_transcript(text_in: str, valid_applications: dict[str, dict]) -> dict:
             param_response = client.system_one(state=state, questions=questions)
             elapsed = time.perf_counter() - start
             print(f"Parameter call took {elapsed:.2f}s")
+            print(param_response)
 
             for param in parameters:
                 start_id = param_response.answers[f"{param}.phrase_start"].choice

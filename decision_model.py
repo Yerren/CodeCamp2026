@@ -7,7 +7,7 @@ from typesafe_sdk import Choice, ChoiceAnswer, TypeSafeClient
 
 from just_ask_1 import VALID_APPLICATIONS
 
-load_dotenv()  # loads TYPESAFE_API_KEY from .env
+load_dotenv()
 
 
 def build_criteria(valid_applications: dict[str, dict]) -> dict[str, str]:
