@@ -1,0 +1,352 @@
+,dataset,approach,id,valid,error,output,seconds,cost,tokens,app_ok,action_ok,exact_ok
+0,basic,naive,maps-navigate-1,False,invalid: no JSON object in output,,0.7850864000502042,0.0001383,87,False,False,False
+1,basic,naive,maps-navigate-walking,False,invalid: no JSON object in output,,1.341668400040362,0.00018140000000000002,106,False,False,False
+2,basic,naive,maps-navigate-cycling,False,invalid: no JSON object in output,,1.1200011000037193,0.0001886,108,False,False,False
+3,basic,naive,maps-navigate-transit,False,invalid: no JSON object in output,,1.3610619999817573,0.0002045,117,False,False,False
+4,basic,naive,maps-navigate-driving,False,invalid: no JSON object in output,,1.3179344999953173,0.0001636,98,False,False,False
+5,basic,naive,maps-search,False,invalid: no JSON object in output,,1.2477129999897443,0.000198,110,False,False,False
+6,basic,naive,maps-search-radius,False,invalid: no JSON object in output,,1.1091440999880433,0.00017140000000000002,102,False,False,False
+7,basic,naive,maps-traffic,False,invalid: no JSON object in output,,1.1626073999796063,0.0002364,128,False,False,False
+8,basic,naive,music-play-song,False,invalid: no JSON object in output,,1.4314691000035964,0.0001902,106,False,False,False
+9,basic,naive,music-play-artist,False,invalid: no JSON object in output,,1.3864958999911323,0.0001533,93,False,False,False
+10,basic,naive,music-play-song-artist,False,invalid: no JSON object in output,,1.3262976999976672,0.000203,112,False,False,False
+11,basic,naive,music-play-playlist,False,invalid: no JSON object in output,,1.0852746000164188,0.000163,96,False,False,False
+12,basic,naive,music-pause,False,invalid: no JSON object in output,,1.005693799990695,6.24e-05,54,False,False,False
+13,basic,naive,music-skip,False,invalid: no JSON object in output,,0.926236700033769,7.240000000000001e-05,58,False,False,False
+14,basic,naive,music-volume,False,invalid: no JSON object in output,,1.0463165999972261,0.0001361,87,False,False,False
+15,basic,naive,messages-send,False,invalid: no JSON object in output,,0.9973717000102624,0.0001739,103,False,False,False
+16,basic,naive,messages-read,False,invalid: no JSON object in output,,1.2054396999883465,0.00018519999999999998,104,False,False,False
+17,basic,naive,messages-read-sender,False,invalid: no JSON object in output,,0.9855077000102028,0.0001283,83,False,False,False
+18,basic,naive,calendar-create-full,False,invalid: no JSON object in output,,1.1298308999976143,0.0002605,157,False,False,False
+19,basic,naive,calendar-create-date-only,False,invalid: no JSON object in output,,1.0948193999938667,0.0001691,109,False,False,False
+20,basic,naive,calendar-list,False,invalid: no JSON object in output,,1.1073469999828376,0.00013440000000000001,96,False,False,False
+21,basic,naive,calendar-reminder,False,invalid: no JSON object in output,,0.7202616999857128,0.000191,116,False,False,False
+22,basic,naive,weather-current,False,invalid: no JSON object in output,,1.3657676000148058,0.0001614,98,False,False,False
+23,basic,naive,weather-current-location,False,invalid: no JSON object in output,,1.136799499974586,0.0001505,91,False,False,False
+24,basic,naive,weather-forecast,False,invalid: no JSON object in output,,1.0932529999990948,0.0001557,101,False,False,False
+25,basic,just ask,maps-navigate-1,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Ara'}}",1.0779871999984607,0.00029160000000000004,664,True,True,True
+26,basic,just ask,maps-navigate-walking,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Hagley Park', 'mode': 'walking'}}",1.133014400023967,0.00031969999999999996,677,True,True,True
+27,basic,just ask,maps-navigate-cycling,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Sumner Beach', 'mode': 'cycling'}}",0.9833635000395589,0.00031689999999999995,675,True,True,True
+28,basic,just ask,maps-navigate-transit,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Christchurch Airport', 'mode': 'transit'}}",1.0625522000482306,0.00031779999999999997,678,True,True,True
+29,basic,just ask,maps-navigate-driving,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Riccarton Mall', 'mode': 'driving'}}",1.109104999981355,0.00031939999999999996,676,True,True,True
+30,basic,just ask,maps-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'coffee shops'}}",0.98534789995756,0.00029879999999999994,666,True,True,True
+31,basic,just ask,maps-search-radius,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'petrol stations', 'radius_km': 5.0}}",1.061342400033027,0.0003297,681,True,True,True
+32,basic,just ask,maps-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",7.304773700016085,0.0002697,657,True,True,True
+33,basic,just ask,music-play-song,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Bohemian Rhapsody'}}",1.0740190999931656,0.0002985,665,True,True,True
+34,basic,just ask,music-play-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'artist': 'Six60'}}",1.023610300035216,0.0002966,666,True,True,True
+35,basic,just ask,music-play-song-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Royals', 'artist': 'Lorde'}}",1.1820452000247315,0.00031629999999999994,673,True,True,True
+36,basic,just ask,music-play-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Workout Mix'}}",1.1464921000297181,0.00029379999999999993,664,True,True,True
+37,basic,just ask,music-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.1373405999620445,0.0002632,650,True,True,True
+38,basic,just ask,music-skip,True,,"{'application': 'music', 'action': 'skip', 'parameters': {}}",1.2771801999770105,0.0002632,650,True,True,True
+39,basic,just ask,music-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': 40}}",1.064194899983704,0.00029689999999999995,667,True,True,True
+40,basic,just ask,messages-send,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Sarah', 'body': ""I'm running late.""}}",1.0288158999755979,0.0003272,680,True,True,True
+41,basic,just ask,messages-read,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {}}",1.2003452999633737,0.0002685,653,True,True,True
+42,basic,just ask,messages-read-sender,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {'sender': 'Mum'}}",1.0105722000007518,0.0002966,666,True,True,True
+43,basic,just ask,calendar-create-full,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Team Lunch', 'date': '2026-12-03', 'time': '12:30', 'duration_minutes': 60}}",1.307121800025925,0.00040379999999999995,730,True,True,True
+44,basic,just ask,calendar-create-date-only,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Dentist', 'date': '2026-11-20'}}",0.9764827999752015,0.0003449,695,True,True,True
+45,basic,just ask,calendar-list,True,,"{'application': 'calendar', 'action': 'list_events', 'parameters': {'date': '2026-11-18'}}",1.181754999968689,0.0003227,687,True,True,True
+46,basic,just ask,calendar-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'take out the bins', 'time': '19:00'}}",1.208183699985966,0.00033679999999999995,690,True,True,True
+47,basic,just ask,weather-current,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {}}",1.0200186999863945,0.0002697,657,True,True,True
+48,basic,just ask,weather-current-location,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {'location': 'Wellington'}}",1.0438688999856822,0.00029879999999999994,666,True,True,True
+49,basic,just ask,weather-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Queenstown', 'days': 3}}",1.144877800019458,0.000314,680,True,True,True
+50,basic,json mode,maps-navigate-1,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Ara'}}",1.3317714000004344,0.00029160000000000004,664,True,True,True
+51,basic,json mode,maps-navigate-walking,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Hagley Park', 'mode': 'walking'}}",0.915954000025522,0.00031969999999999996,677,True,True,True
+52,basic,json mode,maps-navigate-cycling,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Sumner Beach', 'mode': 'cycling'}}",1.0285481000319123,0.00031689999999999995,675,True,True,True
+53,basic,json mode,maps-navigate-transit,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Christchurch Airport', 'mode': 'transit'}}",1.0193517999723554,0.00031779999999999997,678,True,True,True
+54,basic,json mode,maps-navigate-driving,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Riccarton Mall', 'mode': 'driving'}}",1.0812143999501131,0.00031939999999999996,676,True,True,True
+55,basic,json mode,maps-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'coffee shops'}}",1.279251000029035,0.00029879999999999994,666,True,True,True
+56,basic,json mode,maps-search-radius,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'petrol stations', 'radius_km': 5.0}}",0.8058363999589346,0.0003297,681,True,True,True
+57,basic,json mode,maps-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",0.880980100017041,0.0002697,657,True,True,True
+58,basic,json mode,music-play-song,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Bohemian Rhapsody'}}",1.1330865999916568,0.0002985,665,True,True,True
+59,basic,json mode,music-play-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'artist': 'Six60'}}",1.1364031999837607,0.0002966,666,True,True,True
+60,basic,json mode,music-play-song-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Royals', 'artist': 'Lorde'}}",1.2778535000397824,0.00031629999999999994,673,True,True,True
+61,basic,json mode,music-play-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Workout Mix'}}",1.0839515999541618,0.00029379999999999993,664,True,True,True
+62,basic,json mode,music-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.0223453000071459,0.0002632,650,True,True,True
+63,basic,json mode,music-skip,True,,"{'application': 'music', 'action': 'skip', 'parameters': {}}",1.4255393000203185,0.0002632,650,True,True,True
+64,basic,json mode,music-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': 40}}",0.9718929000082426,0.00029689999999999995,667,True,True,True
+65,basic,json mode,messages-send,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Sarah', 'body': ""I'm running late.""}}",1.1979936999850906,0.0003272,680,True,True,True
+66,basic,json mode,messages-read,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {}}",1.0081092999898829,0.0002685,653,True,True,True
+67,basic,json mode,messages-read-sender,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {'sender': 'Mum'}}",1.4244520000065677,0.0002966,666,True,True,True
+68,basic,json mode,calendar-create-full,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Team Lunch', 'date': '2026-12-03', 'time': '12:30', 'duration_minutes': 60}}",8.546345099981409,0.00040379999999999995,730,True,True,True
+69,basic,json mode,calendar-create-date-only,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Dentist', 'date': '2026-11-20'}}",1.1493694999953732,0.0003449,695,True,True,True
+70,basic,json mode,calendar-list,True,,"{'application': 'calendar', 'action': 'list_events', 'parameters': {'date': '2026-11-18'}}",2.238229699956719,0.0003227,687,True,True,True
+71,basic,json mode,calendar-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'take out the bins', 'time': '19:00'}}",1.033597000001464,0.00033679999999999995,690,True,True,True
+72,basic,json mode,weather-current,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {}}",1.1281626999843866,0.0002697,657,True,True,True
+73,basic,json mode,weather-current-location,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {'location': 'Wellington'}}",1.0086384000023827,0.00029879999999999994,666,True,True,True
+74,basic,json mode,weather-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Queenstown', 'days': 3}}",1.0674754999927245,0.000314,680,True,True,True
+75,basic,json schema mode,maps-navigate-1,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Ara'}}",1.1642771000042558,0.0002688,588,True,True,True
+76,basic,json schema mode,maps-navigate-walking,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Hagley Park', 'mode': 'walking'}}",1.37813460000325,0.00029689999999999995,601,True,True,True
+77,basic,json schema mode,maps-navigate-cycling,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Sumner Beach', 'mode': 'cycling'}}",1.239563499984797,0.00029410000000000005,599,True,True,True
+78,basic,json schema mode,maps-navigate-transit,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Christchurch Airport', 'mode': 'transit'}}",1.361508000001777,0.000295,602,True,True,True
+79,basic,json schema mode,maps-navigate-driving,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Riccarton Mall', 'mode': 'driving'}}",1.2379493999760598,0.0002966,600,True,True,True
+80,basic,json schema mode,maps-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'coffee shops'}}",1.0944792999653146,0.000276,590,True,True,True
+81,basic,json schema mode,maps-search-radius,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'petrol stations', 'radius_km': '5'}}",1.1445489999605343,0.00030439999999999997,604,True,True,True
+82,basic,json schema mode,maps-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",1.1328638999839313,0.0002269,573,True,True,True
+83,basic,json schema mode,music-play-song,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Bohemian Rhapsody'}}",1.384738799999468,0.0002757,589,True,True,True
+84,basic,json schema mode,music-play-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'artist': 'Six60'}}",1.1561836999608204,0.00027379999999999993,590,True,True,True
+85,basic,json schema mode,music-play-song-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Royals', 'artist': 'Lorde'}}",1.330742400023155,0.0002935,597,True,True,True
+86,basic,json schema mode,music-play-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Workout Mix'}}",1.1930082999751903,0.000271,588,True,True,True
+87,basic,json schema mode,music-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.222708999994211,0.00022040000000000002,566,True,True,True
+88,basic,json schema mode,music-skip,True,,"{'application': 'music', 'action': 'skip', 'parameters': {}}",0.9962655000272207,0.00022040000000000002,566,True,True,True
+89,basic,json schema mode,music-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': '40'}}",1.1186576999607496,0.0002766,592,True,True,True
+90,basic,json schema mode,messages-send,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Sarah', 'body': ""I'm running late.""}}",1.2290420000208542,0.00030439999999999997,604,True,True,True
+91,basic,json schema mode,messages-read,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {}}",1.0930802000220865,0.00022569999999999998,569,True,True,True
+92,basic,json schema mode,messages-read-sender,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {'sender': 'Mum'}}",1.0636042999685742,0.00027379999999999993,590,True,True,True
+93,basic,json schema mode,calendar-create-full,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Team Lunch', 'date': '2026-12-03', 'time': '12:30', 'duration_minutes': '60'}}",1.3701309000025503,0.0003835,655,True,True,True
+94,basic,json schema mode,calendar-create-date-only,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Dentist', 'date': '2026-11-20'}}",1.112158800009638,0.0003221,619,True,True,True
+95,basic,json schema mode,calendar-list,True,,"{'application': 'calendar', 'action': 'list_events', 'parameters': {'date': '2026-11-18'}}",1.1195441000163555,0.00029989999999999997,611,True,True,True
+96,basic,json schema mode,calendar-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'take out the bins', 'time': '19:00'}}",1.1657810999895446,0.000314,614,True,True,True
+97,basic,json schema mode,weather-current,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {}}",1.1339758000103757,0.0002469,581,True,True,True
+98,basic,json schema mode,weather-current-location,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {'location': 'Wellington'}}",1.1426554000354372,0.000276,590,True,True,True
+99,basic,json schema mode,weather-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Queenstown', 'days': '3'}}",1.1098940999945626,0.0002937,605,True,True,True
+100,basic,tool calling,maps-navigate-1,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Ara'}}",1.0870871999650262,0.000314,768,True,True,True
+101,basic,tool calling,maps-navigate-walking,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Hagley Park', 'mode': 'walking'}}",1.0599507999722846,0.0003371,779,True,True,True
+102,basic,tool calling,maps-navigate-cycling,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Sumner Beach', 'mode': 'cycling'}}",1.0407486000331119,0.00033429999999999994,777,True,True,True
+103,basic,tool calling,maps-navigate-transit,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Christchurch Airport', 'mode': 'transit'}}",1.0840408999938518,0.00033519999999999996,780,True,True,True
+104,basic,tool calling,maps-navigate-driving,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Riccarton Mall', 'mode': 'driving'}}",0.8677742999861948,0.00033679999999999995,778,True,True,True
+105,basic,tool calling,maps-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'coffee shops'}}",1.1342694999766536,0.0003212,770,True,True,True
+106,basic,tool calling,maps-search-radius,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'petrol stations', 'radius_km': '5'}}",1.044675900018774,0.00034460000000000003,782,True,True,True
+107,basic,tool calling,maps-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",1.1934474000008777,0.00030710000000000004,767,True,True,True
+108,basic,tool calling,music-play-song,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Bohemian Rhapsody'}}",1.1076072999858297,0.0003209,769,True,True,True
+109,basic,tool calling,music-play-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'artist': 'Six60'}}",1.0352225999813527,0.000319,770,True,True,True
+110,basic,tool calling,music-play-song-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Royals', 'artist': 'Lorde'}}",1.0647584999678656,0.0003337,775,True,True,True
+111,basic,tool calling,music-play-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Workout Mix'}}",1.3839646000415087,0.0003162,768,True,True,True
+112,basic,tool calling,music-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.0215313999797218,0.00030060000000000004,760,True,True,True
+113,basic,tool calling,music-skip,True,,"{'application': 'music', 'action': 'skip', 'parameters': {}}",1.3328603000263683,0.00030060000000000004,760,True,True,True
+114,basic,tool calling,music-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': '40'}}",0.788277100014966,0.00032179999999999996,772,True,True,True
+115,basic,tool calling,messages-send,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Sarah', 'body': ""I'm running late""}}",1.2550615999498405,0.00034460000000000003,782,True,True,True
+116,basic,tool calling,messages-read,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {}}",1.1668383000069298,0.0002934,758,True,True,True
+117,basic,tool calling,messages-read-sender,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {'sender': 'Mum'}}",1.1350611000088975,0.000319,770,True,True,True
+118,basic,tool calling,calendar-create-full,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Team Lunch', 'date': '2026-12-03', 'time': '12:30', 'duration_minutes': '60'}}",1.1210228000418283,0.00041369999999999997,829,True,True,True
+119,basic,tool calling,calendar-create-date-only,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Dentist', 'date': '2026-11-20'}}",1.1769827000098303,0.00036229999999999997,797,True,True,True
+120,basic,tool calling,calendar-list,True,,"{'application': 'calendar', 'action': 'list_events', 'parameters': {'date': '2026-11-18'}}",1.1764468000037596,0.00034510000000000004,791,True,True,True
+121,basic,tool calling,calendar-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'take out the bins', 'time': '19:00'}}",1.2100868000416085,0.0003542,792,True,True,True
+122,basic,tool calling,weather-current,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {}}",1.2742409000056796,0.00030710000000000004,767,True,True,True
+123,basic,tool calling,weather-current-location,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {'location': 'Wellington'}}",1.3181137000210583,0.0003212,770,True,True,True
+124,basic,tool calling,weather-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'days': '3', 'location': 'Queenstown'}}",1.4481504000141285,0.0003339,783,True,True,True
+125,basic,json schema mode 2,maps-navigate-1,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Ara'}}",1.507162399997469,0.0001395,91,True,True,True
+126,basic,json schema mode 2,maps-navigate-walking,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Hagley Park', 'mode': 'walking'}}",1.3161854000063613,0.0001526,98,True,True,True
+127,basic,json schema mode 2,maps-navigate-cycling,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Sumner Beach', 'mode': 'cycling'}}",0.9074668000102974,0.0001498,96,True,True,True
+128,basic,json schema mode 2,maps-navigate-transit,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Christchurch Airport', 'mode': 'transit'}}",0.9229590999893844,0.00015069999999999998,99,True,True,True
+129,basic,json schema mode 2,maps-navigate-driving,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Riccarton Mall', 'mode': 'driving'}}",1.2187865999876522,0.00015230000000000002,97,True,True,True
+130,basic,json schema mode 2,maps-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'coffee shops'}}",0.8856877000071108,0.0001517,95,True,True,True
+131,basic,json schema mode 2,maps-search-radius,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'petrol stations', 'radius_km': 5.0}}",1.2039549000328407,0.0001626,102,True,True,True
+132,basic,json schema mode 2,maps-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",0.9764088000520132,0.00011009999999999999,81,True,True,True
+133,basic,json schema mode 2,music-play-song,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Bohemian Rhapsody'}}",1.0243357999715954,0.0001639,99,True,True,True
+134,basic,json schema mode 2,music-play-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'artist': 'Six60'}}",1.2534827000345103,0.0001445,93,True,True,True
+135,basic,json schema mode 2,music-play-song-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Royals', 'artist': 'Lorde'}}",1.293901700002607,0.00016419999999999998,100,True,True,True
+136,basic,json schema mode 2,music-play-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Workout Mix'}}",1.355787499982398,0.0001617,99,True,True,True
+137,basic,json schema mode 2,music-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.2324216999695636,0.0001036,74,True,True,True
+138,basic,json schema mode 2,music-skip,True,,"{'application': 'music', 'action': 'skip', 'parameters': {}}",1.44124750001356,0.0001036,74,True,True,True
+139,basic,json schema mode 2,music-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': 40}}",1.2487111000227742,0.00013230000000000002,89,True,True,True
+140,basic,json schema mode 2,messages-send,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Sarah', 'body': ""I'm running late.""}}",1.2239483000012115,0.0001601,101,True,True,True
+141,basic,json schema mode 2,messages-read,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {}}",1.040573599981144,0.0001239,83,True,True,True
+142,basic,json schema mode 2,messages-read-sender,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {'sender': 'Mum'}}",1.3807008999865502,0.000132,88,True,True,True
+143,basic,json schema mode 2,calendar-create-full,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Team Lunch', 'date': '2026-12-03', 'time': '12:30', 'duration_minutes': 60}}",0.977245399961248,0.00023669999999999998,151,True,True,True
+144,basic,json schema mode 2,calendar-create-date-only,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Dentist', 'date': '2026-11-20'}}",1.3393848999985494,0.0002153,131,True,True,True
+145,basic,json schema mode 2,calendar-list,True,,"{'application': 'calendar', 'action': 'list_events', 'parameters': {'date': '2026-11-18'}}",1.2017914000316523,0.0001556,108,True,True,True
+146,basic,json schema mode 2,calendar-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'take out the bins', 'time': '19:00'}}",1.2958379000192508,0.00016969999999999998,111,True,True,True
+147,basic,json schema mode 2,weather-current,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {}}",1.4174747000215575,0.0001251,87,True,True,True
+148,basic,json schema mode 2,weather-current-location,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {'location': 'Wellington'}}",1.2078251999919303,0.00013169999999999998,87,True,True,True
+149,basic,json schema mode 2,weather-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Queenstown', 'days': 3}}",1.3608514000079595,0.0001469,101,True,True,True
+150,basic,decision model 1,maps-navigate-1,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",0.6248479000059888,2.3982000000000002e-05,717,True,True,
+151,basic,decision model 1,maps-navigate-walking,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",0.590068900026381,2.4066000000000003e-05,719,True,True,
+152,basic,decision model 1,maps-navigate-cycling,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",0.5740617999690585,2.4066000000000003e-05,719,True,True,
+153,basic,decision model 1,maps-navigate-transit,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",0.5233408000203781,2.4318e-05,725,True,True,
+154,basic,decision model 1,maps-navigate-driving,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",0.5632306000334211,2.4066000000000003e-05,719,True,True,
+155,basic,decision model 1,maps-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': None}",0.5721818000311032,2.394e-05,719,True,True,
+156,basic,decision model 1,maps-search-radius,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': None}",0.5170352999703027,2.4066000000000003e-05,722,True,True,
+157,basic,decision model 1,maps-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': None}",0.5504120999830775,2.4024000000000002e-05,721,True,True,
+158,basic,decision model 1,music-play-song,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",0.4834149000234902,2.4024000000000002e-05,718,True,True,
+159,basic,decision model 1,music-play-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",0.49262540001655,2.3982000000000002e-05,717,True,True,
+160,basic,decision model 1,music-play-song-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",0.453981600003317,2.394e-05,716,True,True,
+161,basic,decision model 1,music-play-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",0.47954019997268915,2.394e-05,716,True,True,
+162,basic,decision model 1,music-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': None}",0.44668000005185604,2.3856000000000003e-05,714,True,True,
+163,basic,decision model 1,music-skip,True,,"{'application': 'music', 'action': 'skip', 'parameters': None}",0.505968599987682,2.3856000000000003e-05,714,True,True,
+164,basic,decision model 1,music-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': None}",0.44101100001716986,2.4024000000000002e-05,719,True,True,
+165,basic,decision model 1,messages-send,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': None}",0.46737140003824607,2.4024000000000002e-05,719,True,True,
+166,basic,decision model 1,messages-read,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': None}",0.4289660000358708,2.3898000000000004e-05,716,True,True,
+167,basic,decision model 1,messages-read-sender,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': None}",0.431418800028041,2.3982000000000002e-05,718,True,True,
+168,basic,decision model 1,calendar-create-full,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': None}",0.4290079999482259,2.4990000000000003e-05,742,True,True,
+169,basic,decision model 1,calendar-create-date-only,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': None}",0.4309462999808602,2.4486e-05,730,True,True,
+170,basic,decision model 1,calendar-list,True,,"{'application': 'calendar', 'action': 'list_events', 'parameters': None}",0.44023280002875254,2.4444000000000002e-05,729,True,True,
+171,basic,decision model 1,calendar-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': None}",0.4206369000021368,2.4360000000000004e-05,728,True,True,
+172,basic,decision model 1,weather-current,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': None}",0.4606587000307627,2.4024000000000002e-05,719,True,True,
+173,basic,decision model 1,weather-current-location,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': None}",0.44867279997561127,2.394e-05,717,True,True,
+174,basic,decision model 1,weather-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': None}",0.426315099990461,2.4360000000000004e-05,728,True,True,
+175,basic,decision model 2,maps-navigate-1,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",1.0334190999856219,2.9988000000000005e-05,810,True,True,
+176,basic,decision model 2,maps-navigate-walking,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",1.1190734999836423,3.0156e-05,814,True,True,
+177,basic,decision model 2,maps-navigate-cycling,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",0.9346642000018619,3.0156e-05,814,True,True,
+178,basic,decision model 2,maps-navigate-transit,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",1.0471745999529958,3.066e-05,826,True,True,
+179,basic,decision model 2,maps-navigate-driving,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",1.0724907999974675,3.0156e-05,814,True,True,
+180,basic,decision model 2,maps-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': None}",1.0631064000190236,2.9904000000000004e-05,811,True,True,
+181,basic,decision model 2,maps-search-radius,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': None}",1.8548196000047028,3.0156e-05,817,True,True,
+182,basic,decision model 2,maps-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': None}",1.7574644000269473,3.0072e-05,815,True,True,
+183,basic,decision model 2,music-play-song,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",2.171116499986965,3.0324e-05,820,True,True,
+184,basic,decision model 2,music-play-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",2.14499799994519,3.0240000000000002e-05,818,True,True,
+185,basic,decision model 2,music-play-song-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",3.414780899998732,3.0156e-05,816,True,True,
+186,basic,decision model 2,music-play-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",3.519401499943342,3.0156e-05,816,True,True,
+187,basic,decision model 2,music-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': None}",2.1685996999731287,2.9988e-05,812,True,True,
+188,basic,decision model 2,music-skip,True,,"{'application': 'music', 'action': 'skip', 'parameters': None}",2.9673856999725103,2.9988e-05,812,True,True,
+189,basic,decision model 2,music-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': None}",2.2817057999782264,3.0324e-05,821,True,True,
+190,basic,decision model 2,messages-send,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': None}",2.090735199977644,2.9442e-05,787,True,True,
+191,basic,decision model 2,messages-read,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': None}",1.426126900012605,2.9190000000000003e-05,781,True,True,
+192,basic,decision model 2,messages-read-sender,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': None}",1.4915245000156574,2.9358000000000006e-05,785,True,True,
+193,basic,decision model 2,calendar-create-full,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': None}",1.774699600005988,3.1962e-05,856,True,True,
+194,basic,decision model 2,calendar-create-date-only,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': None}",2.211882300034631,3.0954e-05,832,True,True,
+195,basic,decision model 2,calendar-list,True,,"{'application': 'calendar', 'action': 'list_events', 'parameters': None}",2.1489553000428714,3.087000000000001e-05,830,True,True,
+196,basic,decision model 2,calendar-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': None}",1.602338500029873,3.0702000000000005e-05,827,True,True,
+197,basic,decision model 2,weather-current,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': None}",1.4192415999714285,2.9316000000000002e-05,783,True,True,
+198,basic,decision model 2,weather-current-location,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': None}",1.5712945999694057,2.9148e-05,779,True,True,
+199,basic,decision model 2,weather-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': None}",1.3901621999684721,2.9988000000000005e-05,798,True,True,
+200,basic,decision model 3,maps-navigate-1,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Ara'}}",2.0984034999855794,6.657000000000001e-05,1920,True,True,True
+201,basic,decision model 3,maps-navigate-walking,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Hagley Park', 'mode': 'walking'}}",2.0711800000281073,7.1736e-05,2099,True,True,True
+202,basic,decision model 3,maps-navigate-cycling,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Sumner Beach', 'mode': 'bike'}}",2.3779849000275135,7.14e-05,2091,True,True,False
+203,basic,decision model 3,maps-navigate-transit,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Christchurch Airport', 'mode': 'public transport'}}",2.314474800019525,7.917000000000002e-05,2360,True,True,False
+204,basic,decision model 3,maps-navigate-driving,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Riccarton Mall', 'mode': 'Drive'}}",1.7781253000139259,6.7284e-05,1937,True,True,False
+205,basic,decision model 3,maps-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'coffee shops'}}",1.8023829000303522,6.636000000000001e-05,1922,True,True,True
+206,basic,decision model 3,maps-search-radius,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'petrol stations', 'radius_km': '5'}}",1.9230781000223942,7.165200000000001e-05,2104,True,True,True
+207,basic,decision model 3,maps-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",1.1238559000194073,3.0072e-05,815,True,True,True
+208,basic,decision model 3,music-play-song,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Bohemian Rhapsody'}}",3.013361299992539,7.266e-05,2101,True,True,True
+209,basic,decision model 3,music-play-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Six60', 'artist': 'Six60', 'playlist': 'Six60'}}",3.3542746999883093,7.513800000000001e-05,2202,True,True,False
+210,basic,decision model 3,music-play-song-artist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Royals', 'artist': 'Lorde'}}",3.0936933000339195,7.497000000000001e-05,2198,True,True,True
+211,basic,decision model 3,music-play-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Workout Mix'}}",2.877911099989433,7.812e-05,2315,True,True,True
+212,basic,decision model 3,music-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.4929019000264816,2.9988e-05,812,True,True,True
+213,basic,decision model 3,music-skip,True,,"{'application': 'music', 'action': 'skip', 'parameters': {}}",1.3520322000258602,2.9988e-05,812,True,True,True
+214,basic,decision model 3,music-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': '40'}}",1.6570150999468751,5.5271999999999995e-05,1536,True,True,True
+215,basic,decision model 3,messages-send,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Sarah', 'body': ""I'm running late""}}",1.6029986999928951,6.7872e-05,1969,True,True,True
+216,basic,decision model 3,messages-read,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {}}",1.563226800004486,5.2164000000000004e-05,1435,True,True,True
+217,basic,decision model 3,messages-read-sender,True,,"{'application': 'messages', 'action': 'read_latest', 'parameters': {'sender': 'Mum'}}",1.623092900030315,5.485200000000001e-05,1527,True,True,True
+218,basic,decision model 3,calendar-create-full,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Team Lunch', 'date': '2026-12-03', 'time': '12:30', 'duration_minutes': '60 minutes'}}",1.631409200024791,0.00013339200000000003,4222,True,True,False
+219,basic,decision model 3,calendar-create-date-only,True,,"{'application': 'calendar', 'action': 'create_event', 'parameters': {'title': 'Dentist', 'date': '2026-11-20'}}",1.6201645000255667,0.00010361400000000001,3151,True,True,True
+220,basic,decision model 3,calendar-list,True,,"{'application': 'calendar', 'action': 'list_events', 'parameters': {'date': '2026-11-18'}}",1.6061120000085793,5.8212000000000004e-05,1616,True,True,True
+221,basic,decision model 3,calendar-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'take out the bins', 'time': '19:00'}}",1.7673962999833748,7.723800000000001e-05,2286,True,True,True
+222,basic,decision model 3,weather-current,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {}}",1.6208543999819085,5.489400000000001e-05,1527,True,True,True
+223,basic,decision model 3,weather-current-location,True,,"{'application': 'weather', 'action': 'current_conditions', 'parameters': {'location': 'Wellington'}}",1.8047181000001729,5.3592000000000005e-05,1482,True,True,True
+224,basic,decision model 3,weather-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Queenstown', 'days': '3 days'}}",1.6639728000154719,7.7994e-05,2320,True,True,False
+225,hard,naive,pivot-navigate-to-search,False,invalid: no JSON object in output,,1.7966593999881297,0.0001541,103,False,False,False
+226,hard,naive,pivot-music-to-message,False,invalid: no JSON object in output,,1.6444839999894612,0.0002959,165,False,False,False
+227,hard,naive,pivot-destination,False,invalid: no JSON object in output,,1.0933436999912374,0.000181,112,False,False,False
+228,hard,naive,pivot-recipient,False,invalid: no JSON object in output,,1.2059040000312962,0.00018030000000000002,117,False,False,False
+229,hard,naive,pivot-volume,False,invalid: no JSON object in output,,1.1108683999627829,0.00022030000000000002,133,False,False,False
+230,hard,naive,pivot-weather-to-traffic,False,invalid: no JSON object in output,,1.1497887000441551,0.0002809,159,False,False,False
+231,hard,naive,pivot-event-to-reminder,False,invalid: no JSON object in output,,1.1881654000026174,0.0001849,125,False,False,False
+232,hard,naive,pivot-artist-to-playlist,False,invalid: no JSON object in output,,1.2632797000114806,0.0002107,123,False,False,False
+233,hard,naive,misleading-song-title,False,invalid: no JSON object in output,,1.4391933999722824,0.0002123,121,False,False,False
+234,hard,naive,misleading-message-body,False,invalid: no JSON object in output,,1.3428828000323847,0.0002535,141,False,False,False
+235,hard,naive,misleading-reminder-text,False,invalid: no JSON object in output,,1.053718100010883,0.0001894,118,False,False,False
+236,hard,naive,indirect-pause,False,invalid: no JSON object in output,,1.0190007000346668,7.94e-05,74,False,False,False
+237,hard,naive,indirect-forecast,False,invalid: no JSON object in output,,1.3832403999986127,0.0002244,132,False,False,False
+238,hard,naive,filler-and-mode,False,invalid: no JSON object in output,,1.3668014999711886,0.0002371,145,False,False,False
+239,hard,just ask,pivot-navigate-to-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'supermarket'}}",1.2051694999681786,0.0003024,678,True,True,True
+240,hard,just ask,pivot-music-to-message,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Tom', 'body': ""I'll be there in ten minutes.""}}",1.0175450000097044,0.0003392,698,True,True,True
+241,hard,just ask,pivot-destination,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Akaroa'}}",1.1240377000067383,0.00029929999999999996,675,True,True,True
+242,hard,just ask,pivot-recipient,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Priya', 'body': ""dinner's ready""}}",1.2006429999601096,0.0003311,693,True,True,True
+243,hard,just ask,pivot-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': 55}}",1.0369595999945886,0.0003011,681,True,True,True
+244,hard,just ask,pivot-weather-to-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",0.8703105000313371,0.0002742,672,True,True,True
+245,hard,just ask,pivot-event-to-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'call Alex', 'time': '15:00'}}",1.1126208000350744,0.0003357,701,True,True,True
+246,hard,just ask,pivot-artist-to-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Chill Sunday'}}",1.1105936000240035,0.0002965,673,True,True,True
+247,hard,just ask,misleading-song-title,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Here Comes the Rain Again', 'artist': 'Eurythmics'}}",1.1727274000295438,0.0003306,684,True,True,True
+248,hard,just ask,misleading-message-body,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Jess', 'body': ""navigate to the Arts Centre and I'll meet her there.""}}",1.267347900022287,0.00034679999999999997,694,True,True,True
+249,hard,just ask,misleading-reminder-text,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'check the weather forecast before I leave', 'time': '08:15'}}",1.1437724999850616,0.0003452,696,True,True,True
+250,hard,just ask,indirect-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.0581074000219814,0.0002677,665,True,True,True
+251,hard,just ask,indirect-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Dunedin', 'days': 5}}",1.0539364999858662,0.00031769999999999997,685,True,True,True
+252,hard,just ask,filler-and-mode,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'University of Canterbury', 'mode': 'walking'}}",0.9972065999754705,0.0003229,695,True,True,True
+253,hard,json mode,pivot-navigate-to-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'supermarket'}}",0.9752269000164233,0.0003024,678,True,True,True
+254,hard,json mode,pivot-music-to-message,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Tom', 'body': ""I'll be there in ten minutes.""}}",1.1044877999811433,0.0003392,698,True,True,True
+255,hard,json mode,pivot-destination,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Akaroa'}}",1.3651195000275038,0.00029929999999999996,675,True,True,True
+256,hard,json mode,pivot-recipient,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Priya', 'body': ""dinner's ready""}}",1.0430689999484457,0.0003311,693,True,True,True
+257,hard,json mode,pivot-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': 55}}",1.2594021999975666,0.0003011,681,True,True,True
+258,hard,json mode,pivot-weather-to-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",1.2219282999867573,0.0002742,672,True,True,True
+259,hard,json mode,pivot-event-to-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'call Alex', 'time': '15:00'}}",1.4321469999849796,0.0003357,701,True,True,True
+260,hard,json mode,pivot-artist-to-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Chill Sunday'}}",1.1366333999903873,0.0002965,673,True,True,True
+261,hard,json mode,misleading-song-title,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Here Comes the Rain Again', 'artist': 'Eurythmics'}}",1.270151300006546,0.0003306,684,True,True,True
+262,hard,json mode,misleading-message-body,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Jess', 'body': ""navigate to the Arts Centre and I'll meet her there.""}}",1.2663761000148952,0.00034679999999999997,694,True,True,True
+263,hard,json mode,misleading-reminder-text,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'check the weather forecast before I leave', 'time': '08:15'}}",1.0221387999481522,0.0003452,696,True,True,True
+264,hard,json mode,indirect-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.2995994000229985,0.0002677,665,True,True,True
+265,hard,json mode,indirect-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Dunedin', 'days': 5}}",0.9524111999780871,0.00031769999999999997,685,True,True,True
+266,hard,json mode,filler-and-mode,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'University of Canterbury', 'mode': 'walking'}}",1.1063091999967583,0.0003229,695,True,True,True
+267,hard,json schema mode,pivot-navigate-to-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'supermarket'}}",1.2371619999757968,0.0002796,602,True,True,True
+268,hard,json schema mode,pivot-music-to-message,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Tom', 'body': ""I'll be there in ten minutes.""}}",1.2327338000177406,0.0003164,622,True,True,True
+269,hard,json schema mode,pivot-destination,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Akaroa'}}",1.0689560000319034,0.0002765,599,True,True,True
+270,hard,json schema mode,pivot-recipient,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Priya', 'body': ""dinner's ready""}}",1.1415077000274323,0.00030829999999999996,617,True,True,True
+271,hard,json schema mode,pivot-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': '55'}}",1.3777766000130214,0.00028079999999999994,606,True,True,True
+272,hard,json schema mode,pivot-weather-to-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",1.1032400000258349,0.00023140000000000001,588,True,True,True
+273,hard,json schema mode,pivot-event-to-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'call Alex', 'time': '15:00'}}",1.142163700016681,0.00031289999999999996,625,True,True,True
+274,hard,json schema mode,pivot-artist-to-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Chill Sunday'}}",1.2527869999757968,0.0002737,597,True,True,True
+275,hard,json schema mode,misleading-song-title,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Here Comes the Rain Again', 'artist': 'Eurythmics'}}",0.9372352000209503,0.00030779999999999995,608,True,True,True
+276,hard,json schema mode,misleading-message-body,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Jess', 'body': ""navigate to the Arts Centre and I'll meet her there""}}",1.3369565999601036,0.000324,618,True,True,True
+277,hard,json schema mode,misleading-reminder-text,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'check the weather forecast before I leave', 'time': '08:15'}}",1.3153236999642104,0.0003224,620,True,True,True
+278,hard,json schema mode,indirect-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.3442553000058979,0.00022490000000000002,581,True,True,True
+279,hard,json schema mode,indirect-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Dunedin', 'days': '5'}}",1.1656487999716774,0.00029739999999999996,610,True,True,True
+280,hard,json schema mode,filler-and-mode,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'University of Canterbury', 'mode': 'walking'}}",1.1196058000205085,0.00030010000000000003,619,True,True,True
+281,hard,tool calling,pivot-navigate-to-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'supermarket'}}",1.1402291000122204,0.0003248,782,True,True,True
+282,hard,tool calling,pivot-music-to-message,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Tom', 'body': ""I'll be there in ten minutes""}}",1.0563112000236288,0.00035660000000000005,800,True,True,True
+283,hard,tool calling,pivot-destination,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Akaroa'}}",1.2597829999867827,0.0003217,779,True,True,True
+284,hard,tool calling,pivot-recipient,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Priya', 'body': ""dinner's ready""}}",0.8063020000117831,0.0003485,795,True,True,True
+285,hard,tool calling,pivot-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': '55'}}",1.1360647000255994,0.000326,786,True,True,True
+286,hard,tool calling,pivot-weather-to-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",1.1398542000097223,0.0002991,777,True,True,True
+287,hard,tool calling,pivot-event-to-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'time': '15:00', 'text': 'call Alex'}}",1.2474332999554463,0.0003531,803,True,True,True
+288,hard,tool calling,pivot-artist-to-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Chill Sunday'}}",1.2861925999750383,0.0003189,777,True,True,True
+289,hard,tool calling,misleading-song-title,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Here Comes the Rain Again', 'artist': 'Eurythmics'}}",1.1079002000042237,0.000348,786,True,True,True
+290,hard,tool calling,misleading-message-body,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Jess', 'body': ""navigate to the Arts Centre and I'll meet her there.""}}",1.0838143000146374,0.00036669999999999997,797,True,True,True
+291,hard,tool calling,misleading-reminder-text,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'check the weather forecast before I leave', 'time': '08:15'}}",1.1654954999685287,0.00036260000000000003,798,True,True,True
+292,hard,tool calling,indirect-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.2032365000341088,0.00030510000000000004,775,True,True,True
+293,hard,tool calling,indirect-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'days': '5', 'location': 'Dunedin'}}",1.0633417000062764,0.0003376,788,True,True,True
+294,hard,tool calling,filler-and-mode,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'University of Canterbury', 'mode': 'walking'}}",1.282204199989792,0.0003403,797,True,True,True
+295,hard,json schema mode 2,pivot-navigate-to-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'supermarket'}}",1.386446300020907,0.0001553,107,True,True,True
+296,hard,json schema mode 2,pivot-music-to-message,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Tom', 'body': ""I'll be there in ten minutes""}}",1.507381399977021,0.00017209999999999998,119,True,True,True
+297,hard,json schema mode 2,pivot-destination,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Akaroa'}}",1.5572398999938741,0.0001472,102,True,True,True
+298,hard,json schema mode 2,pivot-recipient,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Priya', 'body': ""dinner's ready""}}",1.551645900006406,0.000164,114,True,True,True
+299,hard,json schema mode 2,pivot-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': 55}}",1.3295080999960192,0.0001365,103,True,True,True
+300,hard,json schema mode 2,pivot-weather-to-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",1.2621444000396878,0.0001146,96,True,True,True
+301,hard,json schema mode 2,pivot-event-to-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'Call Alex', 'time': '15:00'}}",1.19103589997394,0.0001686,122,True,True,True
+302,hard,json schema mode 2,pivot-artist-to-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'playlist': 'Chill Sunday'}}",1.2116989999776706,0.0001644,108,True,True,True
+303,hard,json schema mode 2,misleading-song-title,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Here Comes the Rain Again', 'artist': 'Eurythmics'}}",1.3052356999833137,0.0001785,111,True,True,True
+304,hard,json schema mode 2,misleading-message-body,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Jess', 'body': ""navigate to the Arts Centre and I'll meet her there.""}}",1.179859999974724,0.00017969999999999998,115,True,True,True
+305,hard,json schema mode 2,misleading-reminder-text,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'check the weather forecast before I leave', 'time': '08:15'}}",1.4461862000171095,0.0001781,117,True,True,True
+306,hard,json schema mode 2,indirect-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",1.2788930999813601,0.0001081,89,True,True,True
+307,hard,json schema mode 2,indirect-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Dunedin', 'days': 5}}",1.1287783999578096,0.0001506,106,True,True,True
+308,hard,json schema mode 2,filler-and-mode,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'University of Canterbury', 'mode': 'walking'}}",1.375817799998913,0.00015580000000000002,116,True,True,True
+309,hard,decision model 1,pivot-navigate-to-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': None}",0.43308950000209734,2.4444000000000002e-05,731,True,True,
+310,hard,decision model 1,pivot-music-to-message,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': None}",0.42580679996171966,2.4612e-05,733,True,True,
+311,hard,decision model 1,pivot-destination,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",0.46855829999549314,2.4402e-05,727,True,True,
+312,hard,decision model 1,pivot-recipient,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': None}",0.45483350002905354,2.4612e-05,733,True,True,
+313,hard,decision model 1,pivot-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': None}",0.47129099996527657,2.457e-05,732,True,True,
+314,hard,decision model 1,pivot-weather-to-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': None}",0.48365609999746084,2.4654e-05,736,True,True,
+315,hard,decision model 1,pivot-event-to-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': None}",0.5691940999822691,2.4864e-05,740,True,True,
+316,hard,decision model 1,pivot-artist-to-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",0.5487252000020817,2.4318e-05,725,True,True,
+317,hard,decision model 1,misleading-song-title,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",0.6359430000302382,2.4234000000000002e-05,723,True,True,
+318,hard,decision model 1,misleading-message-body,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': None}",0.6187197999679483,2.4318e-05,726,True,True,
+319,hard,decision model 1,misleading-reminder-text,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': None}",0.5996840999578126,2.4486e-05,731,True,True,
+320,hard,decision model 1,indirect-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': None}",0.5953765999875031,2.4444000000000002e-05,728,True,True,
+321,hard,decision model 1,indirect-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': None}",0.5906244000070728,2.4528000000000003e-05,732,True,True,
+322,hard,decision model 1,filler-and-mode,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",0.5888139000162482,2.4822000000000004e-05,737,True,True,
+323,hard,decision model 2,pivot-navigate-to-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': None}",1.1612991000292823,3.0912000000000005e-05,835,True,True,
+324,hard,decision model 2,pivot-music-to-message,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': None}",1.1638241999899037,3.0618000000000004e-05,815,True,True,
+325,hard,decision model 2,pivot-destination,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",1.0986891000065953,3.0828000000000004e-05,830,True,True,
+326,hard,decision model 2,pivot-recipient,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': None}",1.1395519999787211,3.0618000000000004e-05,815,True,True,
+327,hard,decision model 2,pivot-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': None}",1.1453751000226475,3.1416e-05,847,True,True,
+328,hard,decision model 2,pivot-weather-to-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': None}",1.1528410000028089,3.1332e-05,845,True,True,
+329,hard,decision model 2,pivot-event-to-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': None}",1.0825401999754831,3.1710000000000006e-05,851,True,True,
+330,hard,decision model 2,pivot-artist-to-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",1.0966791000100784,3.0912000000000005e-05,834,True,True,
+331,hard,decision model 2,misleading-song-title,True,,"{'application': 'music', 'action': 'play', 'parameters': None}",1.269866299990099,3.0744e-05,830,True,True,
+332,hard,decision model 2,misleading-message-body,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",1.0695383999845944,3.066e-05,826,False,False,
+333,hard,decision model 2,misleading-reminder-text,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': None}",1.0031557999900542,3.0954e-05,833,True,True,
+334,hard,decision model 2,indirect-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': None}",0.9926403000135906,3.1164e-05,840,True,True,
+335,hard,decision model 2,indirect-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': None}",1.0524931999971159,3.0324000000000003e-05,806,True,True,
+336,hard,decision model 2,filler-and-mode,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': None}",1.0327999999863096,3.1667999999999996e-05,850,True,True,
+337,hard,decision model 3,pivot-navigate-to-search,True,,"{'application': 'maps', 'action': 'search_nearby', 'parameters': {'query': 'supermarket'}}",1.7779845999903046,9.244200000000001e-05,2845,True,True,True
+338,hard,decision model 3,pivot-music-to-message,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Tom', 'body': ""that I'll be there in ten minutes""}}",1.7572758000460453,9.8028e-05,3059,True,True,False
+339,hard,decision model 3,pivot-destination,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'Akaroa'}}",1.9985942999483086,7.7952e-05,2303,True,True,True
+340,hard,decision model 3,pivot-recipient,True,,"{'application': 'messages', 'action': 'send_message', 'parameters': {'recipient': 'Priya', 'body': ""saying dinner's ready""}}",2.097798800037708,9.3786e-05,2892,True,True,False
+341,hard,decision model 3,pivot-volume,True,,"{'application': 'music', 'action': 'set_volume', 'parameters': {'level': '55'}}",1.5280290999799035,6.732600000000001e-05,1943,True,True,True
+342,hard,decision model 3,pivot-weather-to-traffic,True,,"{'application': 'maps', 'action': 'show_traffic', 'parameters': {}}",1.109813499962911,3.1332e-05,845,True,True,True
+343,hard,decision model 3,pivot-event-to-reminder,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'call Alex', 'time': '15:00'}}",1.4908022999879904,0.000102984,3219,True,True,True
+344,hard,decision model 3,pivot-artist-to-playlist,True,,"{'application': 'music', 'action': 'play', 'parameters': {'artist': 'Benee', 'playlist': 'Chill Sunday playlist'}}",1.4192166000138968,0.00010248000000000001,3202,True,True,False
+345,hard,decision model 3,misleading-song-title,True,,"{'application': 'music', 'action': 'play', 'parameters': {'song': 'Here Comes the Rain Again', 'artist': 'Eurythmics'}}",1.4066440000315197,8.9502e-05,2712,True,True,True
+346,hard,decision model 3,misleading-message-body,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'the Arts Centre'}}",1.396457799943164,8.5722e-05,2612,False,False,False
+347,hard,decision model 3,misleading-reminder-text,True,,"{'application': 'calendar', 'action': 'set_reminder', 'parameters': {'text': 'check the weather forecast before I leave', 'time': '08:15'}}",1.3851323000271805,8.4588e-05,2554,True,True,True
+348,hard,decision model 3,indirect-pause,True,,"{'application': 'music', 'action': 'pause', 'parameters': {}}",0.9416369999526069,3.1164e-05,840,True,True,True
+349,hard,decision model 3,indirect-forecast,True,,"{'application': 'weather', 'action': 'forecast', 'parameters': {'location': 'Dunedin', 'days': '5 days'}}",1.461086500028614,9.273600000000001e-05,2865,True,True,False
+350,hard,decision model 3,filler-and-mode,True,,"{'application': 'maps', 'action': 'navigate', 'parameters': {'destination': 'University of Canterbury', 'mode': 'on foot'}}",1.4203366999863647,0.00010294199999999999,3218,True,True,False
