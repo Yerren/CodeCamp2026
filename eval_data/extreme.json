@@ -1,0 +1,20 @@
+[
+  {"id": "multi-pivot-music", "transcript": "Play Lorde. No, skip this. Actually just pause. Wait, no, go back to playing Lorde, Royals specifically.", "expected": {"application": "music", "action": "play", "parameters": {"song": "Royals", "artist": "Lorde"}}},
+  {"id": "pivot-song-same-artist", "transcript": "Play Royals by Lorde, sorry, I mean Team, same artist.", "expected": {"application": "music", "action": "play", "parameters": {"song": "Team", "artist": "Lorde"}}},
+  {"id": "negated-recipient", "transcript": "Don't text Mum, text Dad that I won't make it to dinner.", "expected": {"application": "messages", "action": "send_message", "parameters": {"recipient": "Dad", "body": "I won't make it to dinner"}}},
+  {"id": "command-inside-body", "transcript": "Text Sam: remind me to play Six60 at 19:00.", "expected": {"application": "messages", "action": "send_message", "parameters": {"recipient": "Sam", "body": "remind me to play Six60 at 19:00"}}},
+  {"id": "cancel-then-new-app", "transcript": "Navigate home, actually cancel that, I'm not going anywhere. What did Priya last send me?", "expected": {"application": "messages", "action": "read_latest", "parameters": {"sender": "Priya"}}},
+  {"id": "hypothetical-distractor", "transcript": "If it's raining I'd normally ask for the forecast, but today I just want the current conditions in Nelson.", "expected": {"application": "weather", "action": "current_conditions", "parameters": {"location": "Nelson"}}},
+  {"id": "song-title-is-command", "transcript": "Play Skip to My Lou.", "expected": {"application": "music", "action": "play", "parameters": {"song": "Skip to My Lou"}}},
+  {"id": "playlist-name-is-other-app", "transcript": "Put on my Traffic Jams playlist.", "expected": {"application": "music", "action": "play", "parameters": {"playlist": "Traffic Jams"}}},
+  {"id": "arithmetic-volume", "transcript": "The volume's at 30, bump it up by 25.", "expected": {"application": "music", "action": "set_volume", "parameters": {"level": 55}}},
+  {"id": "spoken-number-volume", "transcript": "Set the volume to sixty-five percent.", "expected": {"application": "music", "action": "set_volume", "parameters": {"level": 65}}},
+  {"id": "unit-conversion-radius", "transcript": "Find EV chargers within 2000 metres.", "expected": {"application": "maps", "action": "search_nearby", "parameters": {"query": "EV chargers", "radius_km": 2}}},
+  {"id": "unit-conversion-days", "transcript": "What's the forecast for Napier over the next fortnight?", "expected": {"application": "weather", "action": "forecast", "parameters": {"location": "Napier", "days": 14}}},
+  {"id": "relative-date", "transcript": "Today is 2026-11-14. What's on my calendar tomorrow?", "expected": {"application": "calendar", "action": "list_events", "parameters": {"date": "2026-11-15"}}},
+  {"id": "spoken-time", "transcript": "Remind me to call the bank at quarter past three in the afternoon.", "expected": {"application": "calendar", "action": "set_reminder", "parameters": {"text": "call the bank", "time": "15:15"}}},
+  {"id": "event-time-shift-and-duration", "transcript": "Create an event called Board Meeting on 2026-12-01 at 9am, no, push it an hour later, and make it an hour and a half long.", "expected": {"application": "calendar", "action": "create_event", "parameters": {"title": "Board Meeting", "date": "2026-12-01", "time": "10:00", "duration_minutes": 90}}},
+  {"id": "mode-elimination", "transcript": "Not walking, and I'm not driving either. I'll catch the bus to Te Papa.", "expected": {"application": "maps", "action": "navigate", "parameters": {"destination": "Te Papa", "mode": "transit"}}},
+  {"id": "pivot-back-to-original", "transcript": "Take me to Akaroa. Hmm, or Lyttelton? No, Akaroa was right, by car.", "expected": {"application": "maps", "action": "navigate", "parameters": {"destination": "Akaroa", "mode": "driving"}}},
+  {"id": "reminder-with-relative-time", "transcript": "It's 14:40 now. Remind me in 50 minutes to move the car.", "expected": {"application": "calendar", "action": "set_reminder", "parameters": {"text": "move the car", "time": "15:30"}}}
+]
