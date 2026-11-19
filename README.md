@@ -13,4 +13,4 @@ Companion demos for "AI-as-a-Component". See https://produceintelligence.co.nz/s
    TYPESAFE_API_KEY=your-typesafe-api-key
    ```
 
-4. Run the [jupyter notebooks](https://jupyter.org) - for example via [Google Colab](https://developers.google.com/colab) or [VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks), etc.
+4. Run the [jupyter notebooks](https://jupyter.org) - for example via [VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
